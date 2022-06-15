@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
-<div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>StudyRoom에 오신걸 환영합니다.</h1>
-</div>
-
 	<div style="padding-top:100px; margin-bottom: 100px;width: 30%; margin-left: 35%; text-align: center;">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs nav-justified mt-3" role="tablist" style="width:600px; margin:0 auto;">
@@ -34,10 +28,10 @@
 
 					<div class="row mt-3">
 						<div class="col-sm-6" style="text-align: center;">
-							<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/passwordResetMember">비밀번호 재설정</a>
+							<a class="small_text non_deco" href="${pageContext.request.contextPath}/study/member/passwordResetMember">비밀번호 재설정</a>
 						</div>
 						<div class="col-sm-6" style="text-align: center;">
-							<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/signupForm">회원가입</a>
+							<a class="small_text non_deco" href="${pageContext.request.contextPath}/study/member/signupForm">회원가입</a>
 						</div>
 					</div>
 				</form>
@@ -56,10 +50,10 @@
 
 					<div class="row mt-3">
 						<div class="col-sm-6" style="text-align: center;">
-							<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/passwordResetBusiness">비밀번호 재설정</a>
+							<a class="small_text non_deco" href="${pageContext.request.contextPath}/study/member/passwordResetBusiness">비밀번호 재설정</a>
 						</div>
 						<div class="col-sm-6" style="text-align: center;">
-							<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/buSignupForm">사업자 회원가입</a>
+							<a class="small_text non_deco" href="${pageContext.request.contextPath}/study/member/buSignupForm">사업자 회원가입</a>
 						</div>
 					</div>
 				</form>
