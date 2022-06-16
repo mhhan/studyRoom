@@ -4,11 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/study")
 public class StudyRoomController {
 
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public String index() {
-		return "index/index";
+		return "index";
 	}
 }

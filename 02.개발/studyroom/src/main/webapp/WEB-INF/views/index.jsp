@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/layout/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,19 +22,19 @@
 <div class="container mt-5">
   <div class="row">
     <div style="text-align: center;">
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/study/member/loginForm'">
-      		<h1>╥н╠вюн</h1>
+      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/member/loginForm'">
+      		<h1>К║°Й╥╦Л²╦</h1>
       	</div>
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/study/member/signupForm'">
-      		<h1>х╦©Ь ╟║ют</h1>
+      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/member/signupForm'">
+      		<h1>М ▄Л⌡░ Й╟─Л·┘</h1>
       	</div>
     </div>
     <div style="text-align: center;">
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/study/seatCheck'">
-      		<h1>аб╪╝ х╝юн</h1>
+      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/seatCheck'">
+      		<h1>Л╒▄Л└² М≥∙Л²╦</h1>
       	</div>
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/study/beloginReservation'">
-      		<h1>╨Я х╦©Ь аб╪╝ ©╧╬Ю</h1>
+      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/beloginReservation'">
+      		<h1>К╧└ М ▄Л⌡░ Л╒▄Л└² Л≤┬Л∙╫</h1>
       	</div>
     </div>
   </div>

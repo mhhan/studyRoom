@@ -13,6 +13,9 @@
 </head>
 <body>
 <div class="container-fluid p-5 bg-primary text-white text-center">
+<a href="<%=request.getContextPath()%>/" style="float: left;">
+	<h3 style="color: white;">SR</h3>
+</a>
   <h1>StudyRoom에 오신걸 환영합니다.</h1>
 </div>
 </body>
