@@ -29,14 +29,5 @@ public class MemberController {
 	public String signupPro() {
 		return "member/signupPro";
 	}
-	
-	@RequestMapping("buSignupForm")
-	public String buSignupForm() {
-		return "member/buSignupForm";
-	}
-	
-	@RequestMapping("buSignupPro")
-	public String buSignupPro() {
-		return "member/buSignupPro";
-	}
+
 }
