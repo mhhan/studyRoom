@@ -4,40 +4,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-	.main_box{
-		 width: 30%; 
-		 height: 300px; 
-		 border: 2px solid blue;
-		 display: inline-block;
-		 margin: 20px;
-		 cursor: pointer;
-	 }
-</style>
 </head>
 <body>
+	<div style="padding-top:100px; margin-bottom: 100px;width: 30%; margin-left: 35%; text-align: center;">
+		<div id="member-login" class="container tab-pane active">
+			<form action="${pageContext.request.contextPath}/member/loginPro" method="post">
 
-<div class="container mt-5">
-  <div class="row">
-    <div style="text-align: center;">
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/member/loginForm'">
-      		<h1>로그인</h1>
-      	</div>
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/member/signupForm'">
-      		<h1>회원 가입</h1>
-      	</div>
-    </div>
-    <div style="text-align: center;">
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/seatCheck'">
-      		<h1>좌석 확인</h1>
-      	</div>
-      	<div class="main_box" onclick="location.href='<%=request.getContextPath()%>/beloginReservation'">
-      		<h1>비 회원 좌석 예약</h1>
-      	</div>
-    </div>
-  </div>
-</div>
+				<input type="text" name="email" class="form-control form-control-lg mt-3" placeholder="이메일" autocomplete="username"> 
+				<input type="password" name="password" class="form-control form-control-lg mt-1" placeholder="비밀번호" autocomplete="current-password"> 
+				<input type="submit" class="default_btn rounded mt-3" value="로그인">
+				<hr>
+
+				<div class="row mt-3">
+					<div class="col-sm-6" style="text-align: center;">
+						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/passwordResetMember">비밀번호 재설정</a>
+					</div>
+					<div class="col-sm-6" style="text-align: center;">
+						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/signupForm">회원가입</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
