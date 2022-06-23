@@ -9,4 +9,6 @@ public interface MemberDao {
 
 	public int getMemberSelect(Member m);
 
+	public Member getIdChk(String id);
+
 }

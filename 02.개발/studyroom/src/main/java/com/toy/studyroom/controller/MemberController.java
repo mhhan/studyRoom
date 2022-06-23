@@ -3,11 +3,11 @@ package com.toy.studyroom.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.toy.studyroom.model.Member;
 import com.toy.studyroom.service.MemberService;
@@ -33,14 +33,9 @@ public class MemberController {
 		this.session = request.getSession();
 	}
 	
-	@RequestMapping("loginForm")
-	public String login() {
-		return "member/loginForm";
-	}
-	
 	@RequestMapping("loginFormPro")
 	public String loginPro() {
-		return "member/loginPro";
+		return "alert";
 	}
 	
 	
@@ -62,6 +57,23 @@ public class MemberController {
 		model.addAttribute("msg", msg);
 		model.addAttribute("url",url);
 		return "alert";
+	}
+	
+	@RequestMapping("idChk")
+	@ResponseBody
+	public boolean idChk(String id) {
+		Member m;
+		try {
+			m = memberService.getIdChk(id);
+			if(m.getId().equals(id)) {
+				System.out.println("id = "+id+" , m.getId = "+m.getId());
+				return true;
+			}
+		}catch (Exception e) {
+		}
+		
+		return false;
+		
 	}
 
 }

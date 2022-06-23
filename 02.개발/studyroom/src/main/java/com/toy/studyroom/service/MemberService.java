@@ -20,5 +20,10 @@ public class MemberService {
 		return memberDao.getMemberSelect(m);
 	}
 
+
+	public Member getIdChk(String id) {
+		return memberDao.getIdChk(id);
+	}
+
 	
 }

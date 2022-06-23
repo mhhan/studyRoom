@@ -19,10 +19,10 @@
 </style>
 <body>
 <script type="text/javascript">
-	let booId = true;
+	let booId = false;
 	let booPass = false;
 $(function(){
-    $(".idChk").keyup(function (event) {
+    $(".idCheck").keyup(function (event) {
         const regexp =/[^a-z0-9]/gi;
         const v = $(this).val();
         if (regexp.test(v)) {
@@ -43,12 +43,7 @@ $(function(){
     		passSpan.innerHTML = "";
     	}
     });
-    if( booId && booPass){
-    	$(".sub").attr("disabled", true);
-    }
-    else{
-    	$(".sub").attr("disabled", true);
-    }
+
     
 });
 
@@ -60,11 +55,13 @@ function passChk(){
 		label.innerHTML = "비밀번호가 일치합니다."
 		label.style.color = "blue";
 		booPass = true;
-		console.log(booPass)
+		disable();
 	}
 	else{
 		label.innerHTML = "비밀번호가 일치하지 않습니다"
 		label.style.color = "red";
+		booPass = false;
+		disable();
 	}
 }
 
@@ -77,15 +74,27 @@ function idChk(e){
 		dateType:'json',
 		data:{id:inputId},
 		success : function(result){
-			if(result == true){
+			if(result === true){
 				alert('중복된 아이디 입니다.')
+				inputId.innerHTML = "";
+				disable();
 			} else {
 				alert('생성가능합니다.')
 				e.disabled = false
 				booId = true;
+				disable();
 			}
 		}
 	})
+}
+
+function disable(){
+	 if( booId && booPass){
+	    	$(".sub").prop("disabled", false);
+    }
+	    else{
+	    	$(".sub").prop("disabled", true);
+    }
 }
 
 </script>

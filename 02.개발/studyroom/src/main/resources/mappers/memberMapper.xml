@@ -5,4 +5,8 @@
 	<insert id="getMemberSelect">
 		insert into member values(#{id}, #{pass}, #{tel}, #{name})
 	</insert>
+	
+	<select id="getIdChk" parameterType="String" resultType="Member">
+		select id from member where id = #{id}
+	</select>
 </mapper>
