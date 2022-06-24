@@ -1,5 +1,8 @@
 package com.toy.studyroom.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
 import com.toy.studyroom.dao.MemberDao;
@@ -23,6 +26,14 @@ public class MemberService {
 
 	public Member getIdChk(String id) {
 		return memberDao.getIdChk(id);
+	}
+
+
+	public int passReset(String pass, String id) {
+		Map<String, String> map = new HashMap<>();
+		map.put("pass", pass);
+		map.put("id", id);
+		return memberDao.passReset(map);
 	}
 
 	

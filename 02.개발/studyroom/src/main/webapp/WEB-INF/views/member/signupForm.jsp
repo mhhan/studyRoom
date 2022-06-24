@@ -101,12 +101,10 @@ function disable(){
 <div style="padding-top:100px; margin-bottom: 100px;width: 30%; margin-left: 35%; text-align: center;">
 	<div id="member-login" class="container tab-pane active">
 		<form action="${pageContext.request.contextPath}/member/signupPro" method="post">
-			<label>이름</label>
-			<input type="text" name="name" class="form-control form-control-lg mt-3"  placeholder="이름" required="required">
 			<label>아이디</label><br>
 			<div class="row">
 				<div class="col-sm-9">
-					<input type="text" name="id" class="form-control form-control-lg idCheck" placeholder="아이디" required="required" value="${id}">
+					<input type="text" name="id" class="form-control form-control-lg idCheck" placeholder="아이디" required="required">
 				</div>
 				<div class="col-2" style="margin-top: 10px; width: 10%; height: 100%">
 					<input type="button" onclick="idChk(this)" value="중복확인">
@@ -116,6 +114,8 @@ function disable(){
 			<input type="password" name="pass" class="form-control form-control-lg mt-1 pass" placeholder="비밀번호" required="required">
 			<label class="labelPass">비밀번호 확인</label> 
 			<input type="password" name="passwordChk" class="form-control form-control-lg mt-1 passChk" onkeyup="passChk()" placeholder="비밀번호확인" required="required">
+			<label>이름</label>
+			<input type="text" name="name" class="form-control form-control-lg mt-3"  placeholder="이름" required="required">
 			<label>핸드폰 번호</label> 
 			<input type="tel" name="tel" class="form-control form-control-lg mt-1" placeholder="핸드폰 번호" required="required">
 			<input type="submit" class="default_btn rounded mt-3 sub" disabled="disabled" value="회원가입">

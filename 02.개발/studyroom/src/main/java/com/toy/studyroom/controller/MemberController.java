@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.toy.studyroom.dao.MemberDao;
 import com.toy.studyroom.model.Member;
 import com.toy.studyroom.service.MemberService;
 
@@ -75,5 +76,35 @@ public class MemberController {
 		return false;
 		
 	}
+	
+	@RequestMapping("password")
+	public String password() {
+		
+		return "member/password";
+	}
+	
+	@RequestMapping("passwordReset")
+	public String passwordReset(String id) {
+		model.addAttribute("id",id);
+		return "member/passwordReset";
+	}
+	
+	@RequestMapping("passwordResetPro")
+	public String passwordResetPro(String pass,String id) {
+		String msg = "비밀번호 변경에 실패했습니다.";
+		String url = request.getContextPath()+"/member/passwordReset";
+		int rowCnt = 0;
+		try {
+			rowCnt = memberService.passReset(pass,id);
+			if(rowCnt > 0) {
+				msg = "비밀번호를 변경했습니다.";
+				url = request.getContextPath()+"/";
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "alert";
+	}
+	
 
 }

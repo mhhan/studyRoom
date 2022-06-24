@@ -9,4 +9,8 @@
 	<select id="getIdChk" parameterType="String" resultType="Member">
 		select id from member where id = #{id}
 	</select>
+	
+	<update id="passReset">
+		update (select * from member where id=#{id}) set pass = #{pass}
+	</update>
 </mapper>

@@ -18,10 +18,13 @@
 				<hr>
 
 				<div class="row mt-3">
-					<div class="col-sm-6" style="text-align: center;">
-						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/passwordResetMember">비밀번호 재설정</a>
+					<div class="col-sm-3" style="text-align: center;">
+						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/password">아이디찾기</a>
 					</div>
-					<div class="col-sm-6" style="text-align: center;">
+					<div class="col-sm-3" style="text-align: center;">
+						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/password">비밀번호찾기</a>
+					</div>
+					<div class="col-sm-6" >
 						<a class="small_text non_deco" href="${pageContext.request.contextPath}/member/signupForm">회원가입</a>
 					</div>
 				</div>
