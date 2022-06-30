@@ -76,7 +76,7 @@ function idChk(e){
 		success : function(result){
 			if(result === true){
 				alert('중복된 아이디 입니다.')
-				inputId.innerHTML = "";
+				booId = false;
 				disable();
 			} else {
 				alert('생성가능합니다.')

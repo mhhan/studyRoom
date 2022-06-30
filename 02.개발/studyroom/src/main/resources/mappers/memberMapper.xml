@@ -11,6 +11,6 @@
 	</select>
 	
 	<update id="passReset">
-		update (select * from member where id=#{id}) set pass = #{pass}
+		update member set pass = #{pass} where id = #{id}
 	</update>
 </mapper>

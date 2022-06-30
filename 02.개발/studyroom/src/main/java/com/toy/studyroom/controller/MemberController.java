@@ -34,8 +34,9 @@ public class MemberController {
 		this.session = request.getSession();
 	}
 	
-	@RequestMapping("loginFormPro")
-	public String loginPro() {
+	@RequestMapping("loginPro")
+	public String loginPro(Member m) {
+		
 		return "alert";
 	}
 	
@@ -93,12 +94,12 @@ public class MemberController {
 	public String passwordResetPro(String pass,String id) {
 		String msg = "비밀번호 변경에 실패했습니다.";
 		String url = request.getContextPath()+"/member/passwordReset";
+		System.out.println("Propass = "+ pass+" , Proid = "+id);
 		int rowCnt = 0;
 		try {
 			rowCnt = memberService.passReset(pass,id);
 			if(rowCnt > 0) {
-				msg = "비밀번호를 변경했습니다.";
-				url = request.getContextPath()+"/";
+				return "index";
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
